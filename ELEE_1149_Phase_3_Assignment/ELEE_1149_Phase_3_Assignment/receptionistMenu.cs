@@ -16,5 +16,11 @@ namespace ELEE_1149_Phase_3_Assignment
         {
             InitializeComponent();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            new login().Show();
+            this.Close();
+        }
     }
 }

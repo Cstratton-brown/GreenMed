@@ -37,6 +37,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,12 +111,26 @@ namespace ELEE_1149_Phase_3_Assignment
             this.picLogo.TabIndex = 6;
             this.picLogo.TabStop = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.SlateGray;
+            this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(117, 264);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(104, 41);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Text = "&Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(68)))), ((int)(((byte)(142)))));
             this.ClientSize = new System.Drawing.Size(369, 317);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtPassword);
@@ -140,6 +155,7 @@ namespace ELEE_1149_Phase_3_Assignment
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

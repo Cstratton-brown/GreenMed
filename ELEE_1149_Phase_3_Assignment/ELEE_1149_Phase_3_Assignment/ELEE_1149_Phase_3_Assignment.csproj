@@ -66,6 +66,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>loginDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="nurseDoctorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nurseDoctorMenu.Designer.cs">
+      <DependentUpon>nurseDoctorMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="receptionistMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="nurseDoctorMenu.resx">
+      <DependentUpon>nurseDoctorMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="receptionistMenu.resx">
       <DependentUpon>receptionistMenu.cs</DependentUpon>
     </EmbeddedResource>

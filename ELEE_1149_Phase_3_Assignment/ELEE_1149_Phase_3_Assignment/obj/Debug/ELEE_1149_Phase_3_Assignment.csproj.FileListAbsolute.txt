@@ -11,3 +11,4 @@ C:\Users\Charles\Documents\Visual Studio Projects\ELEE_1149_Phase_3_Assignment\E
 C:\Users\Charles\Documents\Visual Studio Projects\ELEE_1149_Phase_3_Assignment\ELEE_1149_Phase_3_Assignment\obj\Debug\ELEE_1149_Phase_3_Assignment.receptionistMenu.resources
 C:\Users\Charles\Documents\Visual Studio Projects\ELEE_1149_Phase_3_Assignment\ELEE_1149_Phase_3_Assignment\bin\Debug\loginDatabase.mdf
 C:\Users\Charles\Documents\Visual Studio Projects\ELEE_1149_Phase_3_Assignment\ELEE_1149_Phase_3_Assignment\bin\Debug\loginDatabase_log.ldf
+C:\Users\Charles\Documents\Visual Studio Projects\ELEE_1149_Phase_3_Assignment\ELEE_1149_Phase_3_Assignment\obj\Debug\ELEE_1149_Phase_3_Assignment.nurseDoctorMenu.resources
