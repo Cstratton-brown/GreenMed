@@ -33,7 +33,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bntPatients = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -74,17 +74,18 @@ namespace ELEE_1149_Phase_3_Assignment
             this.button2.Text = "Appointments";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // bntPatients
             // 
-            this.button3.BackColor = System.Drawing.Color.SlateGray;
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(259, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 41);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Patients";
-            this.button3.UseVisualStyleBackColor = false;
+            this.bntPatients.BackColor = System.Drawing.Color.SlateGray;
+            this.bntPatients.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntPatients.ForeColor = System.Drawing.Color.White;
+            this.bntPatients.Location = new System.Drawing.Point(259, 21);
+            this.bntPatients.Name = "bntPatients";
+            this.bntPatients.Size = new System.Drawing.Size(104, 41);
+            this.bntPatients.TabIndex = 3;
+            this.bntPatients.Text = "Patients";
+            this.bntPatients.UseVisualStyleBackColor = false;
+            this.bntPatients.Click += new System.EventHandler(this.bntPatients_Click);
             // 
             // button4
             // 
@@ -132,7 +133,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.bntPatients);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -148,7 +149,7 @@ namespace ELEE_1149_Phase_3_Assignment
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bntPatients;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnLogOut;

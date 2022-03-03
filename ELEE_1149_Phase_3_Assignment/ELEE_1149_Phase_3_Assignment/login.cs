@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ELEE_1149_Phase_3_Assignment
 {
     public partial class login : Form
     {
         
-        String userPassword;
-        String userID;
         String userJob;
         public login()
         {
@@ -24,53 +23,59 @@ namespace ELEE_1149_Phase_3_Assignment
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\Charles\Documents\Visual Studio Projects\ELEE_1149_Phase_3_Assignment\ELEE_1149_Phase_3_Assignment\loginDatabase.mdf;Integrated Security = True");
+
+
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Charles\Documents\Visual Studio Projects\ELEE_1149_Phase_3_Assignment\ELEE_1149_Phase_3_Assignment\loginDatabase.mdf; Integrated Security = True");
+            
             con.Open();
-            String query = "select LoginID, LoginPassword, Role from dbo.Login where LoginID='" + txtID.Text + "'and LoginPassword='" + txtPassword.Text +"'";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable("Login");
-            sda.Fill(dt);
+            SqlCommand command = new SqlCommand("select LoginID, LoginPassword, Role, Active from dbo.Login where LoginID = @textID and LoginPassword = @textPassword; Update login set Active = 'True' where LoginID = @textID and LoginPassword = @textPassword ", con);
+            command.Parameters.Add("@textID", SqlDbType.NChar);
+            command.Parameters.Add("@textPassword", SqlDbType.NChar);
+            command.Parameters["@textID"].Value = txtID.Text;
+            command.Parameters["@textPassword"].Value = txtPassword.Text;
+            command.ExecuteNonQuery();
 
-            userID = dt.Rows[0]["LoginID"].ToString();
-            userPassword = dt.Rows[0]["LoginPassword"].ToString();
-            userJob = dt.Rows[0]["Role"].ToString();
-        
-           if (userJob == "Receptionist")
-           {
-                this.Hide();
-                new receptionistMenu().Show();
-           }
-           else if (userJob == "Doctor")
-           {
-                this.Hide();
-                new nurseDoctorMenu().Show();
-           }
-           else if (userJob == "Nurse")
-            {
-                this.Hide();
-                new nurseDoctorMenu().Show();
-            }
+            SqlDataAdapter sda = new SqlDataAdapter(command);
 
-            /*if (dt.Rows[0][0].ToString() == "1" && dt.Rows[0]["Role"].ToString() == "1")
+                DataTable dt = new DataTable("Login");
+
+                sda.Fill(dt);
+
+            try
             {
-                this.Hide();
-                new receptionistMenu().Show();
+                userJob = dt.Rows[0]["Role"].ToString();
             }
-            else if (dt.Rows[0][0].ToString() == "1" && dt.Rows[0]["Role"].ToString() == "2")
-            {
-                this.Hide();
-                new nurseDoctorMenu().Show();
-            }*/
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Please enter correct ID and Password", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+                if (userJob == "Receptionist")
+                {
+                    this.Hide();
+                    new receptionistMenu().Show();
+                }
+                else if (userJob == "Doctor")
+                {
+                    this.Hide();
+                    new nurseDoctorMenu().Show();
+                }
+                else if (userJob == "Nurse")
+                {
+                    this.Hide();
+                    new nurseDoctorMenu().Show();
+                }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
