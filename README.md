@@ -1,7 +1,10 @@
 # GreenMed
-ELEE-1149 Assignment 3rd Phase
-This is the 3rd phase of my University assignment for Module ELEE-1149: Software Engineering.
+GreenMed is the name of a managment system developed for a group university assignment
+
 The task is to create a gui for a GPs office that fits certain parameters.
 The parameters are that only Receptionists can book patient appointments.
-Doctors and Nurses can view their patient appointments for the day and the month.
-Doctors and Nurses can see a database of repeat pescriptions but only the doctors can edit them.
+Appointments can be booked with either the 2 Doctors or the Nurse
+Doctors and the Nurse can view their patient appointments for the day and the month.
+Doctors and the Nurse can see a database of repeat pescriptions but only the doctors can edit them.
+All members of staff can see a database of patients but only the receptionist can add new patients to the database
+Patient appointments can be booked only for the current month
