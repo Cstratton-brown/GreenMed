@@ -21,3 +21,6 @@ C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\Gr
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.pdb
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.UserControlDays.resources
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.csprojAssemblyReference.cache
+C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.AddAppointment.resources
+C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.RemoveAppointment.resources
+C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.DailyAppointments.resources
