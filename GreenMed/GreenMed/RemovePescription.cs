@@ -13,8 +13,7 @@ namespace ELEE_1149_Phase_3_Assignment
 {
     public partial class RemovePescription : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
-        String patientName;
+        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True"); String patientName;
         String pescriptionName;
         Boolean patientNameCheck = false;
         Boolean pescriptionNameCheck = false;

@@ -34,7 +34,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnMedication = new System.Windows.Forms.Button();
             this.btnAppointments = new System.Windows.Forms.Button();
             this.bntPatients = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnNewAppointment = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,17 +89,18 @@ namespace ELEE_1149_Phase_3_Assignment
             this.bntPatients.UseVisualStyleBackColor = false;
             this.bntPatients.Click += new System.EventHandler(this.bntPatients_Click);
             // 
-            // button4
+            // btnNewAppointment
             // 
-            this.button4.BackColor = System.Drawing.Color.SlateGray;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(104, 160);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(192, 71);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Add New Appointment";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnNewAppointment.BackColor = System.Drawing.Color.SlateGray;
+            this.btnNewAppointment.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewAppointment.ForeColor = System.Drawing.Color.White;
+            this.btnNewAppointment.Location = new System.Drawing.Point(104, 160);
+            this.btnNewAppointment.Name = "btnNewAppointment";
+            this.btnNewAppointment.Size = new System.Drawing.Size(192, 71);
+            this.btnNewAppointment.TabIndex = 4;
+            this.btnNewAppointment.Text = "Add New Appointment";
+            this.btnNewAppointment.UseVisualStyleBackColor = false;
+            this.btnNewAppointment.Click += new System.EventHandler(this.btnNewAppointment_Click);
             // 
             // button5
             // 
@@ -134,7 +135,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.ClientSize = new System.Drawing.Size(659, 361);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnNewAppointment);
             this.Controls.Add(this.bntPatients);
             this.Controls.Add(this.btnAppointments);
             this.Controls.Add(this.btnMedication);
@@ -152,7 +153,7 @@ namespace ELEE_1149_Phase_3_Assignment
         private System.Windows.Forms.Button btnMedication;
         private System.Windows.Forms.Button btnAppointments;
         private System.Windows.Forms.Button bntPatients;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnNewAppointment;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnLogOut;
     }

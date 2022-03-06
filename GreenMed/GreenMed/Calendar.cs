@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using GreenMed;
+using System.Globalization;
 
 namespace ELEE_1149_Phase_3_Assignment
 {
@@ -15,11 +17,12 @@ namespace ELEE_1149_Phase_3_Assignment
     {
         String userJob;
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
-
+        public static int static_month, static_year;
         public Calendar()
         {
             InitializeComponent();
             con.Open();
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -64,6 +67,35 @@ namespace ELEE_1149_Phase_3_Assignment
             new login().Show();
             this.Close();
             con.Close();
+        }
+
+        private void Calendar_Load(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+
+            int month = now.Month;
+            int year = now.Year;
+            String monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+
+            lblMonthYear.Text = monthName + " " + year;
+            static_month = month;
+            static_year = year;
+            DateTime startOfTheMonth = new DateTime(now.Year, now.Month, 1);
+
+            int days = DateTime.DaysInMonth(now.Year, now.Month);
+
+            int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d")) + 1;
+            for (int i = 1; i < dayOfTheWeek; i++)
+            {
+                UserControlBlank ucBlank = new UserControlBlank();
+                CalendarContainer.Controls.Add(ucBlank);
+            }
+            for (int i = 1; i <= days; i++)
+            {
+                UserControlDays ucDays = new UserControlDays();
+                ucDays.days(i);
+                CalendarContainer.Controls.Add(ucDays);
+            }           
         }
     }
 }

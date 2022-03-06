@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using GreenMed;
 
 namespace ELEE_1149_Phase_3_Assignment
 {
     public partial class receptionistMenu : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
-
         public receptionistMenu()
         {
             InitializeComponent();
@@ -54,6 +54,12 @@ namespace ELEE_1149_Phase_3_Assignment
         private void btnAppointments_Click(object sender, EventArgs e)
         {
             new Calendar().Show();
+            this.Close();
+        }
+
+        private void btnNewAppointment_Click(object sender, EventArgs e)
+        {
+            new AddAppointment().Show();
             this.Close();
         }
     }
