@@ -8,3 +8,12 @@ Doctors and the Nurse can view their patient appointments for the day and the mo
 Doctors and the Nurse can see a database of repeat pescriptions but only the doctors can edit them.
 All members of staff can see a database of patients but only the receptionist can add new patients to the database
 Patient appointments can be booked only for the current month
+Login Details for the different roles Receptionists: ID: test Password: 123
+
+ID: Desk2 Password: 2026
+
+Doctors: ID: test2 Password: 456
+
+ID: DR2 Password: 1645
+
+Nurse: ID: test3 Password: 789
