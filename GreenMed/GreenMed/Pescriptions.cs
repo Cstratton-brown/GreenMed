@@ -15,7 +15,6 @@ namespace ELEE_1149_Phase_3_Assignment
     {
         String userJob;
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
-
         public Pescriptions()
         {
             InitializeComponent();

@@ -17,7 +17,7 @@ namespace ELEE_1149_Phase_3_Assignment
     {
         String userJob;
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
-
+        public static int static_month, static_year;
         public Calendar()
         {
             InitializeComponent();
@@ -71,11 +71,6 @@ namespace ELEE_1149_Phase_3_Assignment
 
         private void Calendar_Load(object sender, EventArgs e)
         {
-            displayDays();
-        }
-
-        private void displayDays()
-        {
             DateTime now = DateTime.Now;
 
             int month = now.Month;
@@ -83,12 +78,13 @@ namespace ELEE_1149_Phase_3_Assignment
             String monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
 
             lblMonthYear.Text = monthName + " " + year;
-
+            static_month = month;
+            static_year = year;
             DateTime startOfTheMonth = new DateTime(now.Year, now.Month, 1);
 
             int days = DateTime.DaysInMonth(now.Year, now.Month);
 
-            int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"))+1;
+            int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d")) + 1;
             for (int i = 1; i < dayOfTheWeek; i++)
             {
                 UserControlBlank ucBlank = new UserControlBlank();
@@ -99,8 +95,7 @@ namespace ELEE_1149_Phase_3_Assignment
                 UserControlDays ucDays = new UserControlDays();
                 ucDays.days(i);
                 CalendarContainer.Controls.Add(ucDays);
-            }
-            
+            }           
         }
     }
 }

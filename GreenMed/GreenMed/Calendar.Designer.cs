@@ -83,6 +83,7 @@ namespace ELEE_1149_Phase_3_Assignment
             // 
             // CalendarContainer
             // 
+            this.CalendarContainer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CalendarContainer.Location = new System.Drawing.Point(12, 155);
             this.CalendarContainer.Name = "CalendarContainer";
             this.CalendarContainer.Size = new System.Drawing.Size(756, 492);

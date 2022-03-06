@@ -41,6 +41,7 @@ namespace GreenMed
             this.lblDays.Size = new System.Drawing.Size(51, 20);
             this.lblDays.TabIndex = 0;
             this.lblDays.Text = "label1";
+            this.lblDays.Click += new System.EventHandler(this.lblDays_Click);
             // 
             // UserControlDays
             // 
@@ -51,6 +52,7 @@ namespace GreenMed
             this.Name = "UserControlDays";
             this.Size = new System.Drawing.Size(100, 65);
             this.Load += new System.EventHandler(this.UserControlDays_Load);
+            this.Click += new System.EventHandler(this.UserControlDays_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
