@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ELEE_1149_Phase_3_Assignment.Properties {
+namespace GreenMed.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

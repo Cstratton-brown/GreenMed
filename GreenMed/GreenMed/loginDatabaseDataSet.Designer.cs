@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ELEE_1149_Phase_3_Assignment {
+namespace GreenMed {
     
     
     /// <summary>

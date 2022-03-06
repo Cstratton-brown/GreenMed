@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7D9C6DE4-0963-4AF3-B28D-A8D9EFB46E26}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ELEE_1149_Phase_3_Assignment</RootNamespace>
-    <AssemblyName>ELEE_1149_Phase_3_Assignment</AssemblyName>
+    <RootNamespace>GreenMed</RootNamespace>
+    <AssemblyName>GreenMed</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -128,6 +128,18 @@
     <Compile Include="RemovePescription.Designer.cs">
       <DependentUpon>RemovePescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBlank.Designer.cs">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDays.Designer.cs">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddPatient.resx">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,12 +172,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RemovePatient.resx">
       <DependentUpon>RemovePatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemovePescription.resx">
       <DependentUpon>RemovePescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBlank.resx">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDays.resx">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="loginDatabaseDataSet.xsc">
       <DependentUpon>loginDatabaseDataSet.xsd</DependentUpon>
