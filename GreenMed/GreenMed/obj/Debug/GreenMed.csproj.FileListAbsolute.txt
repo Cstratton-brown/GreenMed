@@ -5,7 +5,6 @@ C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\bin\Debug\Gr
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\bin\Debug\GreenMed.pdb
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\ELEE_1149_Phase_3_Assignment.AddPatient.resources
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\ELEE_1149_Phase_3_Assignment.AddPescription.resources
-C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\ELEE_1149_Phase_3_Assignment.Calendar.resources
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\ELEE_1149_Phase_3_Assignment.Patients.resources
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\ELEE_1149_Phase_3_Assignment.nurseDoctorMenu.resources
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\ELEE_1149_Phase_3_Assignment.Pescriptions.resources
@@ -24,3 +23,4 @@ C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\Gr
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.AddAppointment.resources
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.RemoveAppointment.resources
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\GreenMed.DailyAppointments.resources
+C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\obj\Debug\ELEE_1149_Phase_3_Assignment.CalendarForm.resources
