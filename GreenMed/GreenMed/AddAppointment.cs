@@ -36,15 +36,8 @@ namespace GreenMed
             cbPractitioner.DataSource = dtp;
             cbPractitioner.ValueMember = dtp.Columns[0].ColumnName;
             cbPractitioner.DisplayMember = dtp.Columns[0].ColumnName;
-            if (receptionistMenu.receptionist == false)
-            {
-                txtDate.Text = UserControlDays.static_day + "/" + Calendar.static_month + "/" + Calendar.static_year;
-                txtDate.Enabled = false;
-            }
-            else if (receptionistMenu.receptionist == true)
-            {
-                txtDate.Enabled = true;
-            }
+            
+            
             
 
         }
@@ -59,7 +52,7 @@ namespace GreenMed
             }
             else
             {
-            new Calendar().Show();
+            new CalendarForm().Show();
             this.Close();
             }
             
@@ -87,10 +80,11 @@ namespace GreenMed
                 new receptionistMenu().Show();
                 receptionistMenu.receptionist = false;
                 this.Close();
+
             }
             else
             {
-                new Calendar().Show();
+                new CalendarForm().Show();
                 this.Close();
             }
         }
@@ -99,13 +93,16 @@ namespace GreenMed
         {
             if (receptionistMenu.receptionist == false)
             {
+                txtDate.Text = UserControlDays.static_day + "/" + CalendarForm.static_month + "/" + CalendarForm.static_year;
                 txtDate.Enabled = false;
             }
-            else if (receptionistMenu.receptionist == true)
+            else
             {
                 txtDate.Enabled = true;
+
             }
         }
+        
 
         private void btnCancel_Click_1(object sender, EventArgs e)
         {
@@ -113,11 +110,12 @@ namespace GreenMed
             {
                 new receptionistMenu().Show();
                 receptionistMenu.receptionist = false;
+
                 this.Close();
             }
             else
             {
-                new Calendar().Show();
+                new CalendarForm().Show();
                 this.Close();
             }
         }

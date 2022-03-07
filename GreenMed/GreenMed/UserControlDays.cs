@@ -62,6 +62,7 @@ namespace GreenMed
             }
             else
             {
+                static_day = lblDays.Text;
                 new DailyAppointments().Show();
                 this.ParentForm.Close();
             }
@@ -96,6 +97,7 @@ namespace GreenMed
             }
             else
             {
+                static_day = lblDays.Text;
                 new DailyAppointments().Show();
                 this.ParentForm.Close();
             }

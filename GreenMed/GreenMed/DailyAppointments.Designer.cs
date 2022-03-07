@@ -31,13 +31,13 @@ namespace GreenMed
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailyAppointments));
             this.dgPatients = new System.Windows.Forms.DataGridView();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateofBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblPractitioner = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgPatients)).BeginInit();
@@ -56,6 +56,30 @@ namespace GreenMed
             this.dgPatients.Name = "dgPatients";
             this.dgPatients.Size = new System.Drawing.Size(542, 361);
             this.dgPatients.TabIndex = 19;
+            // 
+            // fullName
+            // 
+            this.fullName.HeaderText = "Patient Name";
+            this.fullName.Name = "fullName";
+            this.fullName.ReadOnly = true;
+            // 
+            // Age
+            // 
+            this.Age.HeaderText = "Date";
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "Start Time";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // DateofBirth
+            // 
+            this.DateofBirth.HeaderText = "End Time";
+            this.DateofBirth.Name = "DateofBirth";
+            this.DateofBirth.ReadOnly = true;
             // 
             // btnBack
             // 
@@ -93,30 +117,6 @@ namespace GreenMed
             this.picLogo.TabIndex = 16;
             this.picLogo.TabStop = false;
             // 
-            // fullName
-            // 
-            this.fullName.HeaderText = "Patient Name";
-            this.fullName.Name = "fullName";
-            this.fullName.ReadOnly = true;
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "Date";
-            this.Age.Name = "Age";
-            this.Age.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "Start Time";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // DateofBirth
-            // 
-            this.DateofBirth.HeaderText = "End Time";
-            this.DateofBirth.Name = "DateofBirth";
-            this.DateofBirth.ReadOnly = true;
-            // 
             // lblPractitioner
             // 
             this.lblPractitioner.AutoSize = true;
@@ -152,6 +152,7 @@ namespace GreenMed
             this.Controls.Add(this.picLogo);
             this.Name = "DailyAppointments";
             this.Text = "DailyAppointments";
+            this.Load += new System.EventHandler(this.DailyAppointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPatients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);

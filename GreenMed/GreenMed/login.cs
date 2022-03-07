@@ -19,6 +19,7 @@ namespace ELEE_1149_Phase_3_Assignment
         public login()
         {
             InitializeComponent();
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

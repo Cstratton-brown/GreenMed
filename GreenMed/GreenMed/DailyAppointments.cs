@@ -10,40 +10,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using ELEE_1149_Phase_3_Assignment;
+using GreenMed;
+using System.Globalization;
 
 namespace GreenMed
 {
     public partial class DailyAppointments : Form
     {
+        int menuCheck;
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
-        string practitioner;
         public DailyAppointments()
         {
             con.Open();
             InitializeComponent();
-            lblDate.Text = UserControlDays.static_day + "/" + Calendar.static_month + "/" + Calendar.static_year;
-            SqlCommand check = new SqlCommand("select Practitioner from Login where Active = @active", con);
-            check.Parameters.Add("@active", SqlDbType.NChar);
-            check.Parameters["@active"].Value = "True";
-            check.ExecuteNonQuery();
-            SqlDataAdapter sda = new SqlDataAdapter(check);
-
-            DataTable dtJ = new DataTable("Login");
-
-            sda.Fill(dtJ);
-            practitioner = dtJ.Rows[0]["Practitioner"].ToString();
-            lblPractitioner.Text = practitioner;
+            
 
             SqlDataReader reader = null;
 
 
             try
             {
-                SqlCommand command = new SqlCommand("select fullName, date, startTime, endTime, Practitioner from Appointments where Practitioner =@practitioner and date=@date", con);
-                command.Parameters.Add("@practitioner", SqlDbType.NChar);
-                command.Parameters["@practitioner"].Value = lblPractitioner.Text;
+                SqlCommand command = new SqlCommand("select Appointments.fullName, Appointments.date, Appointments.startTime, Appointments.endTime, Appointments.Practitioner, Login.Active from Appointments, Login where Login.Practitioner = Appointments.Practitioner and Active=@active and date=@date order by Appointments.startTime", con);
                 command.Parameters.Add("@date", SqlDbType.NChar);
                 command.Parameters["@date"].Value = lblDate.Text;
+                command.Parameters.Add("@active", SqlDbType.NChar);
+                command.Parameters["@active"].Value = true;
 
                 reader = command.ExecuteReader();
 
@@ -65,8 +56,19 @@ namespace GreenMed
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            new nurseDoctorMenu().Show();
-            this.Close();
+
+            if (menuCheck == 0)
+            {
+                new nurseDoctorMenu().Show();
+                this.Close();
+            }
+            else if (menuCheck == 1)
+            {
+                new CalendarForm().Show();
+                menuCheck = 0;
+                this.Close();
+            }
+            
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -86,6 +88,23 @@ namespace GreenMed
             new login().Show();
             this.Close();
             con.Close();
+        }
+
+        private void DailyAppointments_Load(object sender, EventArgs e)
+        {
+            menuCheck = nurseDoctorMenu.menu;
+            if (menuCheck == 0)
+            {
+
+                DateTime date = DateTime.UtcNow;
+                lblDate.Text = date.ToString("d/M/yyyy");
+
+
+            }
+            else if (menuCheck == 1)
+            {
+                lblDate.Text = UserControlDays.static_day + "/" + CalendarForm.static_month + "/" + CalendarForm.static_year;
+            }
         }
     }
 }

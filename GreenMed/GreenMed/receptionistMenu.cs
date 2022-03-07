@@ -54,14 +54,14 @@ namespace ELEE_1149_Phase_3_Assignment
 
         private void btnAppointments_Click(object sender, EventArgs e)
         {
-            new Calendar().Show();
+            new CalendarForm().Show();
             this.Close();
         }
 
         private void btnNewAppointment_Click(object sender, EventArgs e)
         {
-            new AddAppointment().Show();
             receptionist = true;
+            new AddAppointment().Show();
             this.Close();
         }
     }

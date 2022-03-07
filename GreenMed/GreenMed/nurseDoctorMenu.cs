@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using GreenMed;
 
 namespace ELEE_1149_Phase_3_Assignment
 {
     public partial class nurseDoctorMenu : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
+        public static int menu;
         public nurseDoctorMenu()
         {
             InitializeComponent();
+
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -54,8 +57,21 @@ namespace ELEE_1149_Phase_3_Assignment
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new Calendar().Show();
+            new CalendarForm().Show();
+            menu = 1;
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new DailyAppointments().Show();
+            menu = 0;
+            this.Close();
+        }
+
+        private void nurseDoctorMenu_Load(object sender, EventArgs e)
+        {
+            menu = 0;
         }
     }
 }

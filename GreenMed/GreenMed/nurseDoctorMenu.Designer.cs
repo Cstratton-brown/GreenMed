@@ -86,6 +86,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.button5.TabIndex = 8;
             this.button5.Text = "View Daily Appointments List";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -127,6 +128,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.picLogo);
             this.Name = "nurseDoctorMenu";
             this.Text = "nurseDoctorMenu";
+            this.Load += new System.EventHandler(this.nurseDoctorMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
