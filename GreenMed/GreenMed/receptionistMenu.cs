@@ -64,5 +64,11 @@ namespace ELEE_1149_Phase_3_Assignment
             new AddAppointment().Show();
             this.Close();
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            new RemoveAppointment().Show();
+            this.Close();
+        }
     }
 }

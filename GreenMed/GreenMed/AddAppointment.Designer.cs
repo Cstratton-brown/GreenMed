@@ -186,7 +186,7 @@ namespace GreenMed
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.txtDate);
             this.Name = "AddAppointment";
-            this.Text = "AddAppointment2";
+            this.Text = "AddAppointment";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

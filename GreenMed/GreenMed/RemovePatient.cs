@@ -13,8 +13,7 @@ namespace ELEE_1149_Phase_3_Assignment
 {
     public partial class RemovePatient : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True"); String patientName;
-        Boolean patientNameCheck = false;
+        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
 
         public RemovePatient()
         {
@@ -37,41 +36,17 @@ namespace ELEE_1149_Phase_3_Assignment
 
         private void btnRemovePatient_Click(object sender, EventArgs e)
         {
-            var confirmRemoval = MessageBox.Show("Confirm removal of this patient from the databse?", "Confirm Removal", MessageBoxButtons.OKCancel);
+            var confirmRemoval = MessageBox.Show("Confirm removal of this patient, their appointments and pescriptions from the database?", "Confirm Removal", MessageBoxButtons.OKCancel);
             if (confirmRemoval == DialogResult.OK)
-            {
-                SqlCommand check = new SqlCommand("select fullName from Patients where fullName = @name", con);
-                check.Parameters.Add("@name", SqlDbType.NVarChar);
-                check.Parameters["@name"].Value = cbName.SelectedValue;
-                check.ExecuteNonQuery();
-                SqlDataAdapter sda = new SqlDataAdapter(check);
+            {        
+                SqlCommand command = new SqlCommand("delete from Patients, Pescriptions, Appointments where fullName = @name", con);
+                command.Parameters.Add("@name", SqlDbType.NChar);
+                command.Parameters["@name"].Value = cbName.SelectedValue;
+                command.ExecuteNonQuery();
+                new Patients().Show();
+                this.Close();
 
-                DataTable dt = new DataTable("Login");
 
-                sda.Fill(dt);
-                try
-                {
-                    patientName = dt.Rows[0]["fullName"].ToString();
-                    patientNameCheck = true;
-                }
-                catch
-                {
-                    MessageBox.Show("Please enter valid patient name", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (patientNameCheck == true)
-                {
-                    SqlCommand command = new SqlCommand("delete from Patients where fullName = @name", con);
-                    command.Parameters.Add("@name", SqlDbType.NChar);
-                    command.Parameters["@name"].Value = cbName.SelectedValue;
-                    command.ExecuteNonQuery();
-                    new Patients().Show();
-                    this.Close();
-
-                }
-                else
-                {
-
-                }
             }
 
             

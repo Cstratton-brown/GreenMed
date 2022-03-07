@@ -35,7 +35,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnAppointments = new System.Windows.Forms.Button();
             this.bntPatients = new System.Windows.Forms.Button();
             this.btnNewAppointment = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -102,17 +102,18 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnNewAppointment.UseVisualStyleBackColor = false;
             this.btnNewAppointment.Click += new System.EventHandler(this.btnNewAppointment_Click);
             // 
-            // button5
+            // btnRemove
             // 
-            this.button5.BackColor = System.Drawing.Color.SlateGray;
-            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(369, 160);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(192, 71);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Update Existing Appointment";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnRemove.BackColor = System.Drawing.Color.SlateGray;
+            this.btnRemove.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(369, 160);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(192, 71);
+            this.btnRemove.TabIndex = 5;
+            this.btnRemove.Text = "Remove Appointment";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnLogOut
             // 
@@ -134,7 +135,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(659, 361);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnNewAppointment);
             this.Controls.Add(this.bntPatients);
             this.Controls.Add(this.btnAppointments);
@@ -154,7 +155,7 @@ namespace ELEE_1149_Phase_3_Assignment
         private System.Windows.Forms.Button btnAppointments;
         private System.Windows.Forms.Button bntPatients;
         private System.Windows.Forms.Button btnNewAppointment;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnLogOut;
     }
 }

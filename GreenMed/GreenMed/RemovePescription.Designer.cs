@@ -31,12 +31,12 @@ namespace ELEE_1149_Phase_3_Assignment
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemovePescription));
             this.lblName = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.btnRemovePescription = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblPescription = new System.Windows.Forms.Label();
-            this.txtPescription = new System.Windows.Forms.TextBox();
+            this.cbName = new System.Windows.Forms.ComboBox();
+            this.cbPescription = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,13 +48,6 @@ namespace ELEE_1149_Phase_3_Assignment
             this.lblName.Size = new System.Drawing.Size(95, 13);
             this.lblName.TabIndex = 32;
             this.lblName.Text = "Patients Full Name";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(153, 103);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 31;
             // 
             // btnRemovePescription
             // 
@@ -103,12 +96,23 @@ namespace ELEE_1149_Phase_3_Assignment
             this.lblPescription.TabIndex = 33;
             this.lblPescription.Text = "Pescription";
             // 
-            // txtPescription
+            // cbName
             // 
-            this.txtPescription.Location = new System.Drawing.Point(153, 129);
-            this.txtPescription.Name = "txtPescription";
-            this.txtPescription.Size = new System.Drawing.Size(100, 20);
-            this.txtPescription.TabIndex = 34;
+            this.cbName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbName.FormattingEnabled = true;
+            this.cbName.Location = new System.Drawing.Point(132, 103);
+            this.cbName.Name = "cbName";
+            this.cbName.Size = new System.Drawing.Size(121, 21);
+            this.cbName.TabIndex = 36;
+            // 
+            // cbPescription
+            // 
+            this.cbPescription.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPescription.FormattingEnabled = true;
+            this.cbPescription.Location = new System.Drawing.Point(132, 129);
+            this.cbPescription.Name = "cbPescription";
+            this.cbPescription.Size = new System.Drawing.Size(121, 21);
+            this.cbPescription.TabIndex = 37;
             // 
             // RemovePescription
             // 
@@ -116,10 +120,10 @@ namespace ELEE_1149_Phase_3_Assignment
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(288, 319);
-            this.Controls.Add(this.txtPescription);
+            this.Controls.Add(this.cbPescription);
+            this.Controls.Add(this.cbName);
             this.Controls.Add(this.lblPescription);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnRemovePescription);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.picLogo);
@@ -134,11 +138,11 @@ namespace ELEE_1149_Phase_3_Assignment
         #endregion
 
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnRemovePescription;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblPescription;
-        private System.Windows.Forms.TextBox txtPescription;
+        private System.Windows.Forms.ComboBox cbName;
+        private System.Windows.Forms.ComboBox cbPescription;
     }
 }
