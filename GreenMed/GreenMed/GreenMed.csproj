@@ -73,11 +73,11 @@
     <Compile Include="AddPatient.Designer.cs">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPescription.cs">
+    <Compile Include="AddPrescription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPescription.Designer.cs">
-      <DependentUpon>AddPescription.cs</DependentUpon>
+    <Compile Include="AddPrescription.Designer.cs">
+      <DependentUpon>AddPrescription.cs</DependentUpon>
     </Compile>
     <Compile Include="CalendarForm.cs">
       <SubType>Form</SubType>
@@ -108,11 +108,11 @@
     <Compile Include="nurseDoctorMenu.Designer.cs">
       <DependentUpon>nurseDoctorMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pescriptions.cs">
+    <Compile Include="Prescriptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pescriptions.Designer.cs">
-      <DependentUpon>Pescriptions.cs</DependentUpon>
+    <Compile Include="Prescriptions.Designer.cs">
+      <DependentUpon>Prescriptions.cs</DependentUpon>
     </Compile>
     <Compile Include="receptionistMenu.cs">
       <SubType>Form</SubType>
@@ -140,11 +140,11 @@
     <Compile Include="RemovePatient.Designer.cs">
       <DependentUpon>RemovePatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemovePescription.cs">
+    <Compile Include="RemovePrescription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemovePescription.Designer.cs">
-      <DependentUpon>RemovePescription.cs</DependentUpon>
+    <Compile Include="RemovePrescription.Designer.cs">
+      <DependentUpon>RemovePrescription.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlBlank.cs">
       <SubType>UserControl</SubType>
@@ -164,8 +164,8 @@
     <EmbeddedResource Include="AddPatient.resx">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPescription.resx">
-      <DependentUpon>AddPescription.cs</DependentUpon>
+    <EmbeddedResource Include="AddPrescription.resx">
+      <DependentUpon>AddPrescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalendarForm.resx">
       <DependentUpon>CalendarForm.cs</DependentUpon>
@@ -179,8 +179,8 @@
     <EmbeddedResource Include="nurseDoctorMenu.resx">
       <DependentUpon>nurseDoctorMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pescriptions.resx">
-      <DependentUpon>Pescriptions.cs</DependentUpon>
+    <EmbeddedResource Include="Prescriptions.resx">
+      <DependentUpon>Prescriptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="receptionistMenu.resx">
       <DependentUpon>receptionistMenu.cs</DependentUpon>
@@ -204,8 +204,8 @@
     <EmbeddedResource Include="RemovePatient.resx">
       <DependentUpon>RemovePatient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemovePescription.resx">
-      <DependentUpon>RemovePescription.cs</DependentUpon>
+    <EmbeddedResource Include="RemovePrescription.resx">
+      <DependentUpon>RemovePrescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlBlank.resx">
       <DependentUpon>UserControlBlank.cs</DependentUpon>

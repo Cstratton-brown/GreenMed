@@ -14,21 +14,21 @@ namespace ELEE_1149_Phase_3_Assignment
     public partial class AddPatient : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
-
+        //initialize connection string to loginDatabase
         public AddPatient()
         {
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)    //on button click
         {
-            new Patients().Show();
-            this.Close();
+            new Patients().Show();  //open Patients form
+            this.Close();   //close this form
         }
 
-        private void btnAddPatient_Click(object sender, EventArgs e)
-        {
-            con.Open();
+        private void btnAddPatient_Click(object sender, EventArgs e)    //on button click
+        {   
+            con.Open(); //opens the connection
             SqlCommand command = new SqlCommand("insert into Patients (fullName, Age, Gender, DateofBirth) values (@name, @age, @gender, @dateofbirth)", con);
             command.Parameters.Add("@name", SqlDbType.NChar);
             command.Parameters.Add("@age", SqlDbType.NChar);
@@ -38,10 +38,13 @@ namespace ELEE_1149_Phase_3_Assignment
             command.Parameters["@age"].Value = txtAge.Text;
             command.Parameters["@gender"].Value = txtGender.Text;
             command.Parameters["@dateofbirth"].Value = txtDateofBirth.Text;
+               //comnmand using parameters to insert the name,age, gender and date of birth values of their respective text boxes into their respective collumns in database patients
             command.ExecuteNonQuery();
-            con.Close();
-            new Patients().Show();
-            this.Close();
+            //executes the command
+
+            con.Close();    //close the connection
+            new Patients().Show();  //sjow patients form
+            this.Close();   //close this form
         }
     }
 }

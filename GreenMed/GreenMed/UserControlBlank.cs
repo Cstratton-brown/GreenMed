@@ -12,7 +12,7 @@ namespace GreenMed
 {
     public partial class UserControlBlank : UserControl
     {
-        public UserControlBlank()
+        public UserControlBlank()   //this form does nothing just used as a white spot in the calendar for days of the week that are part of the prior month
         {
             InitializeComponent();
         }
