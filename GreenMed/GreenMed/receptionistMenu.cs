@@ -14,7 +14,8 @@ namespace ELEE_1149_Phase_3_Assignment
 {
     public partial class receptionistMenu : Form
     {
-        public static bool receptionist = false;
+        public static bool receptionist;
+        public static int menu;
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\loginDatabase.mdf; Integrated Security = True");
         public receptionistMenu()
         {
@@ -60,6 +61,7 @@ namespace ELEE_1149_Phase_3_Assignment
 
         private void btnNewAppointment_Click(object sender, EventArgs e)
         {
+            menu = 1;
             receptionist = true;
             new AddAppointment().Show();
             this.Close();
@@ -69,6 +71,12 @@ namespace ELEE_1149_Phase_3_Assignment
         {
             new RemoveAppointment().Show();
             this.Close();
+        }
+
+        private void receptionistMenu_Load(object sender, EventArgs e)
+        {
+            menu = 0;
+            receptionist = false;
         }
     }
 }

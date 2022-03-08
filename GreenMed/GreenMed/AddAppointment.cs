@@ -36,9 +36,18 @@ namespace GreenMed
             cbPractitioner.DataSource = dtp;
             cbPractitioner.ValueMember = dtp.Columns[0].ColumnName;
             cbPractitioner.DisplayMember = dtp.Columns[0].ColumnName;
-            
-            
-            
+            if (receptionistMenu.receptionist == true)
+            {
+                txtDate.Enabled = true;
+            }
+            else
+            {
+                txtDate.Text = UserControlDays.static_day + "/" + CalendarForm.static_month + "/" + CalendarForm.static_year;
+                txtDate.Enabled = false;
+            }
+            txtDate.Text = UserControlDays.static_day + "/" + CalendarForm.static_month + "/" + CalendarForm.static_year;
+
+
 
         }
 
@@ -91,16 +100,7 @@ namespace GreenMed
 
         private void AddAppointment_Load(object sender, EventArgs e)
         {
-            if (receptionistMenu.receptionist == false)
-            {
-                txtDate.Text = UserControlDays.static_day + "/" + CalendarForm.static_month + "/" + CalendarForm.static_year;
-                txtDate.Enabled = false;
-            }
-            else
-            {
-                txtDate.Enabled = true;
 
-            }
         }
         
 
