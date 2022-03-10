@@ -102,49 +102,73 @@ namespace GreenMed
             DateTime date = DateTime.UtcNow;
             date.ToString("d/M/yyyy");
 
-            if (String.Compare(startTime, endTime)<0)
+            SqlCommand check = new SqlCommand("select date, startTime, endTime, Practitioner from Appointment", con);
+            SqlDataAdapter sda = new SqlDataAdapter(check);   //data adapter initialized using the command
+            DataTable dt = new DataTable("Patient");    //new datatable created
+            sda.Fill(dt);   //fill datatable with data from the dataadapter
+
+            string start;
+            string end;
+            string dateCheck;
+            string practitioner;
+
+            dateCheck = dt.Columns[0].ToString();
+            start = dt.Columns[1].ToString();
+            end = dt.Columns[2].ToString();
+            practitioner = dt.Columns[3].ToString();
+
+            if (dpDate.Text == dateCheck && cbPractitioner.SelectedValue.ToString() == practitioner && String.Compare(end, startTime) > 0)
             {
-                if (dpDate.Value >= date)
+                MessageBox.Show("Practitioner is scheduled already, please select a new time", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                
+            }
+            else
+            {
+                if (String.Compare(startTime, endTime) < 0)
                 {
-                    SqlCommand command = new SqlCommand("insert into Appointment (fullName, date, startTime, endTime, Practitioner) values (@name, @date, @start, @end, @practitioner)", con);
-                    //command to insert new row into the appointments database using the connection,first brackets say what collumns to insert data into the 2nd lot of brackets is the values to be inserted
-
-                    command.Parameters.Add("@name", SqlDbType.NVarChar);
-                    command.Parameters.Add("@date", SqlDbType.NVarChar);
-                    command.Parameters.Add("@start", SqlDbType.NChar);
-                    command.Parameters.Add("@end", SqlDbType.NChar);
-                    command.Parameters.Add("@practitioner", SqlDbType.NVarChar);
-                    command.Parameters["@name"].Value = cbName.SelectedValue;
-                    command.Parameters["@date"].Value = dpDate.Text;
-                    command.Parameters["@start"].Value = cbStart.SelectedValue;
-                    command.Parameters["@end"].Value = cbEnd.SelectedValue;
-                    command.Parameters["@practitioner"].Value = cbPractitioner.SelectedValue;
-                    //sets the values of each of the above parametres to their respective choice box/text box text values
-                    
-                    command.ExecuteNonQuery();  //executes the command
-                    MessageBox.Show("Appointemnt Added", "Alert", MessageBoxButtons.OK);    //shows a message box that says an appointment has been added
-                    con.Close();    //closes he connection
-                    if (receptionistMenu.receptionist == true)  //check if global variable receptionist is true
+                    if (dpDate.Value >= date)
                     {
-                        new receptionistMenu().Show();  //open receptionist menu form
-                        receptionistMenu.receptionist = false;  //set receptionist to false
-                        this.Close();   //close current form
+                        SqlCommand command = new SqlCommand("insert into Appointment (fullName, date, startTime, endTime, Practitioner) values (@name, @date, @start, @end, @practitioner)", con);
+                        //command to insert new row into the appointments database using the connection,first brackets say what collumns to insert data into the 2nd lot of brackets is the values to be inserted
 
+                        command.Parameters.Add("@name", SqlDbType.NVarChar);
+                        command.Parameters.Add("@date", SqlDbType.NVarChar);
+                        command.Parameters.Add("@start", SqlDbType.NChar);
+                        command.Parameters.Add("@end", SqlDbType.NChar);
+                        command.Parameters.Add("@practitioner", SqlDbType.NVarChar);
+                        command.Parameters["@name"].Value = cbName.SelectedValue;
+                        command.Parameters["@date"].Value = dpDate.Text;
+                        command.Parameters["@start"].Value = cbStart.SelectedValue;
+                        command.Parameters["@end"].Value = cbEnd.SelectedValue;
+                        command.Parameters["@practitioner"].Value = cbPractitioner.SelectedValue;
+                        //sets the values of each of the above parametres to their respective choice box/text box text values
+
+                        command.ExecuteNonQuery();  //executes the command
+                        MessageBox.Show("Appointemnt Added", "Alert", MessageBoxButtons.OK);    //shows a message box that says an appointment has been added
+                        con.Close();    //closes he connection
+                        if (receptionistMenu.receptionist == true)  //check if global variable receptionist is true
+                        {
+                            new receptionistMenu().Show();  //open receptionist menu form
+                            receptionistMenu.receptionist = false;  //set receptionist to false
+                            this.Close();   //close current form
+
+                        }
+                        else    //otherwise
+                        {
+                            new CalendarForm().Show();  //open calendar form
+                            this.Close();   //close current form
+                        }
                     }
-                    else    //otherwise
+                    else
                     {
-                        new CalendarForm().Show();  //open calendar form
-                        this.Close();   //close current form
+                        MessageBox.Show("Please enter valid Date for Appointment", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter valid Date for Appointment", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Start time must be Before End Time", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Start time must be Before End Time", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
                 
