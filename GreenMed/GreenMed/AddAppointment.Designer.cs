@@ -155,9 +155,9 @@ namespace GreenMed
             this.lblDate.AutoSize = true;
             this.lblDate.Location = new System.Drawing.Point(57, 94);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(30, 13);
+            this.lblDate.Size = new System.Drawing.Size(97, 13);
             this.lblDate.TabIndex = 39;
-            this.lblDate.Text = "Date";
+            this.lblDate.Text = "Date: (D/M/YYYY)";
             // 
             // txtDate
             // 

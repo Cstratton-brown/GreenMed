@@ -88,7 +88,7 @@ namespace GreenMed
             command.Parameters["@practitioner"].Value = cbPractitioner.Text;
             //sets the values of each of the above parametres to their respective choice box/text box text values
 
-            command.ExecuteNonQuery();  //executes the command
+            //command.ExecuteNonQuery();  //executes the command
             MessageBox.Show("Appointemnt Added", "Alert", MessageBoxButtons.OK);    //shows a message box that says an appointment has been added
             con.Close();    //closes he connection
             if (receptionistMenu.receptionist == true)  //check if global variable receptionist is true
