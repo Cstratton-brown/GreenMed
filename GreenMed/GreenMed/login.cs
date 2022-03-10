@@ -47,22 +47,23 @@ namespace ELEE_1149_Phase_3_Assignment
             {
                 userJob = dt.Rows[0]["Role"].ToString();
                 //sets the value in the Role collumn to that of userJob
+                if (userJob == "Receptionist")              //this if function checks which role userjobs value is and uses it to determine which screen to open
+                {
+                    this.Hide();
+                    new receptionistMenu().Show();  //if role is receptionist show receptionist menu
+                }
+                else
+                {
+                    this.Hide();
+                    new nurseDoctorMenu().Show();       //if role is doctor or nurse show nurse menu
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Please enter correct ID and Password", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //if there is no value it throws an error, this catches it as an exception and sends a messagebox saying to enter correct log in data
             }
-            if (userJob == "Receptionist")              //this if function checks which role userjobs value is and uses it to determine which screen to open
-            {
-                this.Hide();
-                new receptionistMenu().Show();  //if role is receptionist show receptionist menu
-            }
-            else
-            {
-                this.Hide();
-                new nurseDoctorMenu().Show();       //if role is doctor or nurse show nurse menu
-            }
+
             
         }
 
