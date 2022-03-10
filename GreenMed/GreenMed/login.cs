@@ -21,13 +21,13 @@ namespace ELEE_1149_Phase_3_Assignment
         public login()
         {
             InitializeComponent();
-            
+            con.Open(); //opens connection using connection string
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {            
             
-            con.Open(); //opens connection using connection string
+            
             SqlCommand command = new SqlCommand("select LoginID, LoginPassword, Role, Active from dbo.Login where LoginID = @textID and LoginPassword = @textPassword; Update login set Active = 'True' where LoginID = @textID and LoginPassword = @textPassword ", con);
             command.Parameters.Add("@textID", SqlDbType.NChar);
             command.Parameters.Add("@textPassword", SqlDbType.NChar);
