@@ -72,7 +72,6 @@ namespace GreenMed
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
-            Form addAppointment = (Form)this.Parent;    //was used earlier for something think i changed it to not be needed but to scared to remove it
             SqlCommand command = new SqlCommand("insert into Appointments (fullName, date, startTime, endTime, Practitioner) values (@name, @date, @start, @end, @practitioner)", con);
             //command to insert new row into the appointments database using the connection,first brackets say what collumns to insert data into the 2nd lot of brackets is the values to be inserted
 
