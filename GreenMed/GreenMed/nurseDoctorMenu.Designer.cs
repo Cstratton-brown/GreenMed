@@ -127,6 +127,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.btnMedication);
             this.Controls.Add(this.picLogo);
             this.Name = "nurseDoctorMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "nurseDoctorMenu";
             this.Load += new System.EventHandler(this.nurseDoctorMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

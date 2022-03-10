@@ -18,6 +18,9 @@ namespace ELEE_1149_Phase_3_Assignment
         public AddPatient()
         {
             InitializeComponent();
+            dpAge.Format = DateTimePickerFormat.Custom;
+            // Display the date as "9/3/2022".  
+            dpAge.CustomFormat = "d/M/yyyy";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)    //on button click
@@ -27,7 +30,10 @@ namespace ELEE_1149_Phase_3_Assignment
         }
 
         private void btnAddPatient_Click(object sender, EventArgs e)    //on button click
-        {   
+        {
+            dpAge.Format = DateTimePickerFormat.Custom;
+            // Display the date as "9/3/2022".  
+            dpAge.CustomFormat = "d/M/yyyy";
             con.Open(); //opens the connection
             SqlCommand command = new SqlCommand("insert into Patients (fullName, Age, Gender, DateofBirth) values (@name, @age, @gender, @dateofbirth)", con);
             command.Parameters.Add("@name", SqlDbType.NChar);
@@ -37,7 +43,7 @@ namespace ELEE_1149_Phase_3_Assignment
             command.Parameters["@name"].Value = txtName.Text;
             command.Parameters["@age"].Value = udAge.Value;
             command.Parameters["@gender"].Value = txtGender.Text;
-            command.Parameters["@dateofbirth"].Value = txtDateofBirth.Text;
+            command.Parameters["@dateofbirth"].Value = dpAge.Text;
                //comnmand using parameters to insert the name,age, gender and date of birth values of their respective text boxes into their respective collumns in database patients
             command.ExecuteNonQuery();
             //executes the command

@@ -106,6 +106,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.picLogo);
             this.Name = "RemovePatient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemovePatient";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);

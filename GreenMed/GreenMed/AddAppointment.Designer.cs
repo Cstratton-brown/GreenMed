@@ -37,12 +37,12 @@ namespace GreenMed
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblWith = new System.Windows.Forms.Label();
             this.lblEnd = new System.Windows.Forms.Label();
-            this.txtEnd = new System.Windows.Forms.TextBox();
-            this.txtStart = new System.Windows.Forms.TextBox();
             this.lblStart = new System.Windows.Forms.Label();
             this.lblPatient = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
+            this.cbStart = new System.Windows.Forms.ComboBox();
+            this.cbEnd = new System.Windows.Forms.ComboBox();
+            this.dpDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@ namespace GreenMed
             this.cbPractitioner.FormattingEnabled = true;
             this.cbPractitioner.Location = new System.Drawing.Point(160, 195);
             this.cbPractitioner.Name = "cbPractitioner";
-            this.cbPractitioner.Size = new System.Drawing.Size(121, 21);
+            this.cbPractitioner.Size = new System.Drawing.Size(123, 21);
             this.cbPractitioner.TabIndex = 50;
             // 
             // cbName
@@ -118,20 +118,6 @@ namespace GreenMed
             this.lblEnd.TabIndex = 44;
             this.lblEnd.Text = "End Time";
             // 
-            // txtEnd
-            // 
-            this.txtEnd.Location = new System.Drawing.Point(162, 169);
-            this.txtEnd.Name = "txtEnd";
-            this.txtEnd.Size = new System.Drawing.Size(100, 20);
-            this.txtEnd.TabIndex = 43;
-            // 
-            // txtStart
-            // 
-            this.txtStart.Location = new System.Drawing.Point(162, 143);
-            this.txtStart.Name = "txtStart";
-            this.txtStart.Size = new System.Drawing.Size(100, 20);
-            this.txtStart.TabIndex = 42;
-            // 
             // lblStart
             // 
             this.lblStart.AutoSize = true;
@@ -155,16 +141,37 @@ namespace GreenMed
             this.lblDate.AutoSize = true;
             this.lblDate.Location = new System.Drawing.Point(57, 94);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(97, 13);
+            this.lblDate.Size = new System.Drawing.Size(33, 13);
             this.lblDate.TabIndex = 39;
-            this.lblDate.Text = "Date: (D/M/YYYY)";
+            this.lblDate.Text = "Date:";
             // 
-            // txtDate
+            // cbStart
             // 
-            this.txtDate.Location = new System.Drawing.Point(162, 91);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(100, 20);
-            this.txtDate.TabIndex = 38;
+            this.cbStart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStart.FormattingEnabled = true;
+            this.cbStart.Location = new System.Drawing.Point(162, 142);
+            this.cbStart.Name = "cbStart";
+            this.cbStart.Size = new System.Drawing.Size(121, 21);
+            this.cbStart.TabIndex = 51;
+            // 
+            // cbEnd
+            // 
+            this.cbEnd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEnd.FormattingEnabled = true;
+            this.cbEnd.Location = new System.Drawing.Point(162, 169);
+            this.cbEnd.Name = "cbEnd";
+            this.cbEnd.Size = new System.Drawing.Size(121, 21);
+            this.cbEnd.TabIndex = 52;
+            // 
+            // dpDate
+            // 
+            this.dpDate.Location = new System.Drawing.Point(162, 88);
+            this.dpDate.MaxDate = new System.DateTime(2022, 3, 31, 0, 0, 0, 0);
+            this.dpDate.MinDate = new System.DateTime(2022, 3, 1, 0, 0, 0, 0);
+            this.dpDate.Name = "dpDate";
+            this.dpDate.Size = new System.Drawing.Size(121, 20);
+            this.dpDate.TabIndex = 53;
+            this.dpDate.Value = new System.DateTime(2022, 3, 10, 0, 0, 0, 0);
             // 
             // AddAppointment
             // 
@@ -172,6 +179,9 @@ namespace GreenMed
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(358, 384);
+            this.Controls.Add(this.dpDate);
+            this.Controls.Add(this.cbEnd);
+            this.Controls.Add(this.cbStart);
             this.Controls.Add(this.cbPractitioner);
             this.Controls.Add(this.cbName);
             this.Controls.Add(this.picLogo);
@@ -179,13 +189,11 @@ namespace GreenMed
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblWith);
             this.Controls.Add(this.lblEnd);
-            this.Controls.Add(this.txtEnd);
-            this.Controls.Add(this.txtStart);
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.lblPatient);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.txtDate);
             this.Name = "AddAppointment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddAppointment";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
@@ -202,11 +210,11 @@ namespace GreenMed
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblWith;
         private System.Windows.Forms.Label lblEnd;
-        private System.Windows.Forms.TextBox txtEnd;
-        private System.Windows.Forms.TextBox txtStart;
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Label lblPatient;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.ComboBox cbStart;
+        private System.Windows.Forms.ComboBox cbEnd;
+        private System.Windows.Forms.DateTimePicker dpDate;
     }
 }

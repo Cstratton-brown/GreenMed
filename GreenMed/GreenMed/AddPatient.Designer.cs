@@ -35,12 +35,12 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnAddPatient = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
-            this.txtDateofBirth = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.lblDateofBirth = new System.Windows.Forms.Label();
             this.udAge = new System.Windows.Forms.NumericUpDown();
+            this.dpAge = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udAge)).BeginInit();
             this.SuspendLayout();
@@ -83,24 +83,17 @@ namespace ELEE_1149_Phase_3_Assignment
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(153, 109);
+            this.txtName.Location = new System.Drawing.Point(139, 109);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.Size = new System.Drawing.Size(125, 20);
             this.txtName.TabIndex = 12;
             // 
             // txtGender
             // 
-            this.txtGender.Location = new System.Drawing.Point(153, 161);
+            this.txtGender.Location = new System.Drawing.Point(139, 161);
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(100, 20);
+            this.txtGender.Size = new System.Drawing.Size(125, 20);
             this.txtGender.TabIndex = 14;
-            // 
-            // txtDateofBirth
-            // 
-            this.txtDateofBirth.Location = new System.Drawing.Point(153, 187);
-            this.txtDateofBirth.Name = "txtDateofBirth";
-            this.txtDateofBirth.Size = new System.Drawing.Size(100, 20);
-            this.txtDateofBirth.TabIndex = 15;
             // 
             // lblName
             // 
@@ -140,15 +133,25 @@ namespace ELEE_1149_Phase_3_Assignment
             // 
             // udAge
             // 
-            this.udAge.Location = new System.Drawing.Point(153, 136);
+            this.udAge.Location = new System.Drawing.Point(139, 136);
             this.udAge.Maximum = new decimal(new int[] {
             120,
             0,
             0,
             0});
             this.udAge.Name = "udAge";
-            this.udAge.Size = new System.Drawing.Size(100, 20);
+            this.udAge.Size = new System.Drawing.Size(125, 20);
             this.udAge.TabIndex = 20;
+            // 
+            // dpAge
+            // 
+            this.dpAge.Location = new System.Drawing.Point(139, 190);
+            this.dpAge.MaxDate = new System.DateTime(2022, 3, 10, 0, 0, 0, 0);
+            this.dpAge.MinDate = new System.DateTime(1902, 1, 1, 0, 0, 0, 0);
+            this.dpAge.Name = "dpAge";
+            this.dpAge.Size = new System.Drawing.Size(125, 20);
+            this.dpAge.TabIndex = 21;
+            this.dpAge.Value = new System.DateTime(2022, 3, 10, 0, 0, 0, 0);
             // 
             // AddPatient
             // 
@@ -156,18 +159,19 @@ namespace ELEE_1149_Phase_3_Assignment
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(276, 367);
+            this.Controls.Add(this.dpAge);
             this.Controls.Add(this.udAge);
             this.Controls.Add(this.lblDateofBirth);
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.txtDateofBirth);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnAddPatient);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.picLogo);
             this.Name = "AddPatient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPatient";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udAge)).EndInit();
@@ -183,11 +187,11 @@ namespace ELEE_1149_Phase_3_Assignment
         private System.Windows.Forms.Button btnAddPatient;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtGender;
-        private System.Windows.Forms.TextBox txtDateofBirth;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblDateofBirth;
         private System.Windows.Forms.NumericUpDown udAge;
+        private System.Windows.Forms.DateTimePicker dpAge;
     }
 }

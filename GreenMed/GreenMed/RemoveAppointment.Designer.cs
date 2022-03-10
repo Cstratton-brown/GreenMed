@@ -170,6 +170,7 @@ namespace GreenMed
             this.Controls.Add(this.lblPatient);
             this.Controls.Add(this.lblDate);
             this.Name = "RemoveAppointment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemoveAppointment";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);

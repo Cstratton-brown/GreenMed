@@ -140,6 +140,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnLogin);
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

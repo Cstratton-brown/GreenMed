@@ -43,7 +43,7 @@ namespace GreenMed
 
             try//try to do the following code
             {
-               SqlCommand command = new SqlCommand("select Appointments.fullName, Appointments.date, Appointments.startTime, Appointments.endTime, Appointments.Practitioner, Login.Active from Appointments, Login where Login.Practitioner = Appointments.Practitioner and Active=@active and date=@date order by Appointments.startTime", con);
+               SqlCommand command = new SqlCommand("select Appointment.fullName, Appointment.date, Appointment.startTime, Appointment.endTime, Appointment.Practitioner, Login.Active from Appointment, Login where Login.Practitioner = Appointment.Practitioner and Active=@active and date=@date order by Appointment.startTime", con);
                 //the above command selects fullName,date,startTime,endTime,Practitioner values from the Appointments table and active values from the Login database where Practitioner in the login database is the same as Practitioner in the Appointments database
                 //and where the value in the active collumn is the same as that of @active and the value of the date collumn is the same as that of @date, then oder them by the start time from the appointments database
                command.Parameters.Add("@date", SqlDbType.NChar);

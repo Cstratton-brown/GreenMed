@@ -196,6 +196,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.picLogo);
             this.Name = "CalendarForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calendar";
             this.Load += new System.EventHandler(this.Calendar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

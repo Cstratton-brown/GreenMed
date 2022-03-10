@@ -142,6 +142,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.btnMedication);
             this.Controls.Add(this.pictureBox1);
             this.Name = "receptionistMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.receptionistMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

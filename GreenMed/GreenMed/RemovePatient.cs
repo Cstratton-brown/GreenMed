@@ -39,7 +39,7 @@ namespace ELEE_1149_Phase_3_Assignment
             var confirmRemoval = MessageBox.Show("Confirm removal of this patient, their appointments and pescriptions from the database?", "Confirm Removal", MessageBoxButtons.OKCancel);     // send up confirmation message box to check they want to remove this patient and their related data from the database
             if (confirmRemoval == DialogResult.OK)  //if they click ok
             {        
-                SqlCommand command = new SqlCommand("delete from Patients, Pescriptions, Appointments where fullName = @name", con);        //command to remove the patients data from all tables where the collumn fullName is the same as @name
+                SqlCommand command = new SqlCommand("delete from Patients, Appointments where fullName = @name", con);        //command to remove the patients data from all tables where the collumn fullName is the same as @name
                 command.Parameters.Add("@name", SqlDbType.NChar);   //sets variable type of @name
                 command.Parameters["@name"].Value = cbName.SelectedValue;   //sets value of @name to that of the value selected in the choice box
                 command.ExecuteNonQuery();  //executes the command

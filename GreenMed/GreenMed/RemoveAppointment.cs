@@ -21,7 +21,7 @@ namespace GreenMed
             InitializeComponent();
             con.Open(); //open connection using connection string
 
-            SqlCommand command = new SqlCommand("select fullName, date, startTime, Practitioner from Appointments", con);//make command to get fullName, date, startTime, Practitioner values from Appointments datatable using the connection string
+            SqlCommand command = new SqlCommand("select fullName, date, startTime, Practitioner from Appointment", con);//make command to get fullName, date, startTime, Practitioner values from Appointments datatable using the connection string
             SqlDataAdapter sda = new SqlDataAdapter(command);   //adapt the data from that command
             DataTable dt = new DataTable("Patient");    //makes new datatable
             sda.Fill(dt);   //fills datatable with adapted data retrieved by the command
@@ -55,7 +55,7 @@ namespace GreenMed
             // confirmation message box to ensure they want this appointment removed
             if (confirmRemoval == DialogResult.OK)  //if they click okay
             {
-                SqlCommand command = new SqlCommand("delete from Appointment where fullName = @name, date = @date, startTime = @startTime, Practitioner = @practitioner", con);
+                SqlCommand command = new SqlCommand("delete from Appointment where fullName = @name and date = @date and startTime = @startTime and Practitioner = @practitioner", con);
                 command.Parameters.Add("@name", SqlDbType.NChar);
                 command.Parameters["@name"].Value = cbName.SelectedValue;
                 command.Parameters.Add("@date", SqlDbType.NChar);

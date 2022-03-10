@@ -156,6 +156,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.picLogo);
             this.Name = "Patients";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patients";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPatients)).EndInit();

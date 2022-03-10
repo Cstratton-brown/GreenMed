@@ -151,6 +151,7 @@ namespace GreenMed
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.picLogo);
             this.Name = "DailyAppointments";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DailyAppointments";
             this.Load += new System.EventHandler(this.DailyAppointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPatients)).EndInit();

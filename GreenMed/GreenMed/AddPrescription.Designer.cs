@@ -194,6 +194,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.picLogo);
             this.Name = "AddPescription";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPescription";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
