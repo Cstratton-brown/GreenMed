@@ -1,5 +1,3 @@
-C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\bin\Debug\loginDatabase.mdf
-C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\bin\Debug\loginDatabase_log.ldf
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\bin\Debug\GreenMed.exe.config
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\bin\Debug\GreenMed.exe
 C:\Users\Charles\Documents\Visual Studio Projects\GreenMed\GreenMed\bin\Debug\GreenMed.pdb
