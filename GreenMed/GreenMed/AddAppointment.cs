@@ -102,7 +102,15 @@ namespace GreenMed
             DateTime date = DateTime.UtcNow;
             date.ToString("d/M/yyyy");
 
-            SqlCommand check = new SqlCommand("select date, startTime, endTime, Practitioner from Appointment", con);
+            SqlCommand check = new SqlCommand("select date, startTime, endTime, Practitioner from Appointment where date = @date and startTime = @start and Practitioner = @practitioner", con);
+
+            check.Parameters.Add("@date", SqlDbType.NVarChar);
+            check.Parameters.Add("@start", SqlDbType.NChar);
+            check.Parameters.Add("@practitioner", SqlDbType.NVarChar);
+            check.Parameters["@date"].Value = dpDate.Text;
+            check.Parameters["@start"].Value = cbStart.SelectedValue;
+            check.Parameters["@practitioner"].Value = cbPractitioner.SelectedValue;
+
             SqlDataAdapter sda = new SqlDataAdapter(check);   //data adapter initialized using the command
             DataTable dt = new DataTable("Patient");    //new datatable created
             sda.Fill(dt);   //fill datatable with data from the dataadapter
@@ -113,14 +121,15 @@ namespace GreenMed
             string practitioner;
 
             dateCheck = dt.Columns[0].ToString();
-            start = dt.Columns[1].ToString();
-            end = dt.Columns[2].ToString();
-            practitioner = dt.Columns[3].ToString();
+            start = dt.Columns[0].ToString();
+            end = dt.Columns[0].ToString();
+            practitioner = dt.Columns[0].ToString();
 
-            if (dpDate.Text == dateCheck && cbPractitioner.SelectedValue.ToString() == practitioner && String.Compare(end, startTime) > 0)
+            
+            if (dpDate.Text == dateCheck && String.Compare(end, startTime) > 0 && cbPractitioner.SelectedValue.ToString() == dt.Columns[0].ToString())
             {
                 MessageBox.Show("Practitioner is scheduled already, please select a new time", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                //if statement to check if practitioner is busy currentley ony the time check works
                 
             }
             else
@@ -145,7 +154,7 @@ namespace GreenMed
                         //sets the values of each of the above parametres to their respective choice box/text box text values
 
                         command.ExecuteNonQuery();  //executes the command
-                        MessageBox.Show("Appointemnt Added", "Alert", MessageBoxButtons.OK);    //shows a message box that says an appointment has been added
+                        MessageBox.Show("Appointment Added", "Alert", MessageBoxButtons.OK);    //shows a message box that says an appointment has been added
                         con.Close();    //closes he connection
                         if (receptionistMenu.receptionist == true)  //check if global variable receptionist is true
                         {

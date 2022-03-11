@@ -43,6 +43,7 @@ namespace GreenMed
             this.cbStart = new System.Windows.Forms.ComboBox();
             this.cbEnd = new System.Windows.Forms.ComboBox();
             this.dpDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,12 +174,22 @@ namespace GreenMed
             this.dpDate.TabIndex = 53;
             this.dpDate.Value = new System.DateTime(2022, 3, 10, 0, 0, 0, 0);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(247, 295);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "label1";
+            // 
             // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(358, 384);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dpDate);
             this.Controls.Add(this.cbEnd);
             this.Controls.Add(this.cbStart);
@@ -216,5 +227,6 @@ namespace GreenMed
         private System.Windows.Forms.ComboBox cbStart;
         private System.Windows.Forms.ComboBox cbEnd;
         private System.Windows.Forms.DateTimePicker dpDate;
+        private System.Windows.Forms.Label label1;
     }
 }
