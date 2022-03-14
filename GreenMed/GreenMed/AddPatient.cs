@@ -45,13 +45,22 @@ namespace ELEE_1149_Phase_3_Assignment
             command.Parameters["@age"].Value = udAge.Value;
             command.Parameters["@gender"].Value = txtGender.Text;
             command.Parameters["@dateofbirth"].Value = dpAge.Text;
-               //comnmand using parameters to insert the name,age, gender and date of birth values of their respective text boxes into their respective collumns in database patients
-            command.ExecuteNonQuery();
+            //comnmand using parameters to insert the name,age, gender and date of birth values of their respective text boxes into their respective collumns in database patients
+            try
+            {
+                command.ExecuteNonQuery();
             //executes the command
 
             con.Close();    //close the connection
-            new Patients().Show();  //sjow patients form
+            new Patients().Show();  //show patients form
             this.Close();   //close this form
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Please enter valid Information", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
         }
     }
 }
