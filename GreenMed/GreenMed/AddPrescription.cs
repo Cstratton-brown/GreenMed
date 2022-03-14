@@ -52,13 +52,19 @@ namespace ELEE_1149_Phase_3_Assignment
             command.Parameters.Add("@instructions", SqlDbType.NVarChar);
             command.Parameters["@name"].Value = cbName.SelectedValue;
             command.Parameters["@pescription"].Value = txtPescription.Text;
-            command.Parameters["@start"].Value = txtStart.Text;
-            command.Parameters["@end"].Value = txtEnd.Text;
+            command.Parameters["@start"].Value = dpStart.Text;
+            command.Parameters["@end"].Value = dpEnd.Text;
             command.Parameters["@Instructions"].Value = txtInstructions.Text;
             //command that inserts the values in the choice box and text boxes into the pescriptions database using the connection string
-            command.ExecuteNonQuery();
-            //executes command
-
+            try
+            {
+                command.ExecuteNonQuery();
+                //executes command
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Please enter valid Information", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             con.Close();    //close connection
 
             new Pescriptions().Show();  // opens pescriptions form
