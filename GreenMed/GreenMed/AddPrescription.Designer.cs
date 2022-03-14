@@ -34,8 +34,6 @@ namespace ELEE_1149_Phase_3_Assignment
             this.lblStart = new System.Windows.Forms.Label();
             this.lblPescription = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtEnd = new System.Windows.Forms.TextBox();
-            this.txtStart = new System.Windows.Forms.TextBox();
             this.txtPescription = new System.Windows.Forms.TextBox();
             this.btnAddPescription = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -44,6 +42,8 @@ namespace ELEE_1149_Phase_3_Assignment
             this.txtInstructions = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.cbName = new System.Windows.Forms.ComboBox();
+            this.dpStart = new System.Windows.Forms.DateTimePicker();
+            this.dpEnd = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,20 +82,6 @@ namespace ELEE_1149_Phase_3_Assignment
             this.lblName.Size = new System.Drawing.Size(71, 13);
             this.lblName.TabIndex = 27;
             this.lblName.Text = "Patient Name";
-            // 
-            // txtEnd
-            // 
-            this.txtEnd.Location = new System.Drawing.Point(153, 183);
-            this.txtEnd.Name = "txtEnd";
-            this.txtEnd.Size = new System.Drawing.Size(100, 20);
-            this.txtEnd.TabIndex = 26;
-            // 
-            // txtStart
-            // 
-            this.txtStart.Location = new System.Drawing.Point(153, 157);
-            this.txtStart.Name = "txtStart";
-            this.txtStart.Size = new System.Drawing.Size(100, 20);
-            this.txtStart.TabIndex = 25;
             // 
             // txtPescription
             // 
@@ -173,12 +159,34 @@ namespace ELEE_1149_Phase_3_Assignment
             this.cbName.Size = new System.Drawing.Size(121, 21);
             this.cbName.TabIndex = 34;
             // 
+            // dpStart
+            // 
+            this.dpStart.Location = new System.Drawing.Point(153, 157);
+            this.dpStart.MaxDate = new System.DateTime(2022, 3, 31, 0, 0, 0, 0);
+            this.dpStart.MinDate = new System.DateTime(1902, 1, 1, 0, 0, 0, 0);
+            this.dpStart.Name = "dpStart";
+            this.dpStart.Size = new System.Drawing.Size(125, 20);
+            this.dpStart.TabIndex = 35;
+            this.dpStart.Value = new System.DateTime(2022, 3, 10, 0, 0, 0, 0);
+            // 
+            // dpEnd
+            // 
+            this.dpEnd.Location = new System.Drawing.Point(153, 183);
+            this.dpEnd.MaxDate = new System.DateTime(2022, 3, 31, 0, 0, 0, 0);
+            this.dpEnd.MinDate = new System.DateTime(1902, 1, 1, 0, 0, 0, 0);
+            this.dpEnd.Name = "dpEnd";
+            this.dpEnd.Size = new System.Drawing.Size(125, 20);
+            this.dpEnd.TabIndex = 36;
+            this.dpEnd.Value = new System.DateTime(2022, 3, 10, 0, 0, 0, 0);
+            // 
             // AddPescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(141)))));
             this.ClientSize = new System.Drawing.Size(277, 375);
+            this.Controls.Add(this.dpEnd);
+            this.Controls.Add(this.dpStart);
             this.Controls.Add(this.cbName);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblInstructions);
@@ -187,8 +195,6 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.lblPescription);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.txtEnd);
-            this.Controls.Add(this.txtStart);
             this.Controls.Add(this.txtPescription);
             this.Controls.Add(this.btnAddPescription);
             this.Controls.Add(this.btnCancel);
@@ -208,8 +214,6 @@ namespace ELEE_1149_Phase_3_Assignment
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Label lblPescription;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtEnd;
-        private System.Windows.Forms.TextBox txtStart;
         private System.Windows.Forms.TextBox txtPescription;
         private System.Windows.Forms.Button btnAddPescription;
         private System.Windows.Forms.Button btnCancel;
@@ -218,5 +222,7 @@ namespace ELEE_1149_Phase_3_Assignment
         private System.Windows.Forms.TextBox txtInstructions;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox cbName;
+        private System.Windows.Forms.DateTimePicker dpStart;
+        private System.Windows.Forms.DateTimePicker dpEnd;
     }
 }

@@ -19,6 +19,11 @@ namespace ELEE_1149_Phase_3_Assignment
         {
             con.Open(); //opens the connection
             InitializeComponent();
+            dpStart.Format = DateTimePickerFormat.Custom;
+            // Display the date as "9/3/2022".  
+            dpStart.CustomFormat = "d/M/yyyy";
+            dpStart.MinDate = DateTime.Now;
+            dpEnd.MinDate = DateTime.Now;
             SqlCommand command = new SqlCommand("select fullName from Patients",con);   //command to get the full name values from the patients table using the connection string
             SqlDataAdapter sda = new SqlDataAdapter(command);   //create data adapter using that command
             DataTable dt = new DataTable("Patient");    //create new datatable
