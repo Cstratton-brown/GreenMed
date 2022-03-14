@@ -137,6 +137,7 @@ namespace GreenMed
             this.lblDate.Size = new System.Drawing.Size(58, 26);
             this.lblDate.TabIndex = 21;
             this.lblDate.Text = "Date";
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // DailyAppointments
             // 

@@ -70,9 +70,9 @@ namespace ELEE_1149_Phase_3_Assignment
             this.lblPescription.AutoSize = true;
             this.lblPescription.Location = new System.Drawing.Point(30, 134);
             this.lblPescription.Name = "lblPescription";
-            this.lblPescription.Size = new System.Drawing.Size(59, 13);
+            this.lblPescription.Size = new System.Drawing.Size(62, 13);
             this.lblPescription.TabIndex = 28;
-            this.lblPescription.Text = "Pescription";
+            this.lblPescription.Text = "Prescription";
             // 
             // lblName
             // 
@@ -113,7 +113,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnAddPescription.Name = "btnAddPescription";
             this.btnAddPescription.Size = new System.Drawing.Size(117, 55);
             this.btnAddPescription.TabIndex = 22;
-            this.btnAddPescription.Text = "Add New Pescription";
+            this.btnAddPescription.Text = "Add New Prescription";
             this.btnAddPescription.UseVisualStyleBackColor = false;
             this.btnAddPescription.Click += new System.EventHandler(this.btnAddPescription_Click);
             // 
@@ -195,7 +195,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.picLogo);
             this.Name = "AddPescription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddPescription";
+            this.Text = "AddPrescription";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

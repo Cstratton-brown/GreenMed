@@ -59,7 +59,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnRemovePescription.Name = "btnRemovePescription";
             this.btnRemovePescription.Size = new System.Drawing.Size(117, 55);
             this.btnRemovePescription.TabIndex = 30;
-            this.btnRemovePescription.Text = "Remove Pescription";
+            this.btnRemovePescription.Text = "Remove Prescription";
             this.btnRemovePescription.UseVisualStyleBackColor = false;
             this.btnRemovePescription.Click += new System.EventHandler(this.btnRemovePescription_Click);
             // 
@@ -129,7 +129,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.Controls.Add(this.picLogo);
             this.Name = "RemovePescription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RemovePescription";
+            this.Text = "RemovePrescription";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

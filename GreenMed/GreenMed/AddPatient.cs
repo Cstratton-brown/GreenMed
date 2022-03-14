@@ -21,6 +21,7 @@ namespace ELEE_1149_Phase_3_Assignment
             dpAge.Format = DateTimePickerFormat.Custom;
             // Display the date as "9/3/2022".  
             dpAge.CustomFormat = "d/M/yyyy";
+            dpAge.MaxDate = DateTime.Now;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)    //on button click

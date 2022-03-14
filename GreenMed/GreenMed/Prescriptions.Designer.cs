@@ -33,14 +33,14 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAddPescription = new System.Windows.Forms.Button();
             this.dgPatients = new System.Windows.Forms.DataGridView();
-            this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateofBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Start = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.End = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Instructions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(117, 55);
             this.btnRemove.TabIndex = 17;
-            this.btnRemove.Text = "Remove Pescription";
+            this.btnRemove.Text = "Remove Prescription";
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
@@ -67,7 +67,7 @@ namespace ELEE_1149_Phase_3_Assignment
             this.btnAddPescription.Name = "btnAddPescription";
             this.btnAddPescription.Size = new System.Drawing.Size(117, 55);
             this.btnAddPescription.TabIndex = 16;
-            this.btnAddPescription.Text = "Add New Pescription";
+            this.btnAddPescription.Text = "Add New Prescription";
             this.btnAddPescription.UseVisualStyleBackColor = false;
             this.btnAddPescription.Click += new System.EventHandler(this.btnAddPescription_Click);
             // 
@@ -76,46 +76,14 @@ namespace ELEE_1149_Phase_3_Assignment
             this.dgPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fullName,
-            this.Age,
-            this.Gender,
-            this.DateofBirth,
-            this.Column1});
+            this.Prescription,
+            this.Start,
+            this.End,
+            this.Instructions});
             this.dgPatients.Location = new System.Drawing.Point(12, 77);
             this.dgPatients.Name = "dgPatients";
             this.dgPatients.Size = new System.Drawing.Size(542, 361);
             this.dgPatients.TabIndex = 15;
-            // 
-            // fullName
-            // 
-            this.fullName.HeaderText = "Full Name";
-            this.fullName.Name = "fullName";
-            this.fullName.ReadOnly = true;
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "Pescription";
-            this.Age.Name = "Age";
-            this.Age.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "Start Date";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // DateofBirth
-            // 
-            this.DateofBirth.HeaderText = "End Date";
-            this.DateofBirth.Name = "DateofBirth";
-            this.DateofBirth.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Instructions";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 86;
             // 
             // btnBack
             // 
@@ -153,6 +121,38 @@ namespace ELEE_1149_Phase_3_Assignment
             this.picLogo.TabIndex = 12;
             this.picLogo.TabStop = false;
             // 
+            // fullName
+            // 
+            this.fullName.HeaderText = "Full Name";
+            this.fullName.Name = "fullName";
+            this.fullName.ReadOnly = true;
+            // 
+            // Prescription
+            // 
+            this.Prescription.HeaderText = "Prescription";
+            this.Prescription.Name = "Prescription";
+            this.Prescription.ReadOnly = true;
+            // 
+            // Start
+            // 
+            this.Start.HeaderText = "Start Date";
+            this.Start.Name = "Start";
+            this.Start.ReadOnly = true;
+            // 
+            // End
+            // 
+            this.End.HeaderText = "End Date";
+            this.End.Name = "End";
+            this.End.ReadOnly = true;
+            // 
+            // Instructions
+            // 
+            this.Instructions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Instructions.HeaderText = "Instructions";
+            this.Instructions.Name = "Instructions";
+            this.Instructions.ReadOnly = true;
+            this.Instructions.Width = 86;
+            // 
             // Pescriptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,9 +183,9 @@ namespace ELEE_1149_Phase_3_Assignment
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateofBirth;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Start;
+        private System.Windows.Forms.DataGridViewTextBoxColumn End;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Instructions;
     }
 }

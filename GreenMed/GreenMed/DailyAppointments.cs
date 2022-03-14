@@ -109,5 +109,10 @@ namespace GreenMed
         {
            
         }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

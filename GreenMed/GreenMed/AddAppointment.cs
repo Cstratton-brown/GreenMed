@@ -27,7 +27,7 @@ namespace GreenMed
             dpDate.Format = DateTimePickerFormat.Custom;
             // Display the date as "9/3/2022".  
             dpDate.CustomFormat = "d/M/yyyy";
-
+            dpDate.MinDate = DateTime.Now;
             SqlCommand command = new SqlCommand("select fullName from Patients", con);  //command to get fullName values from Patients database using the connection
             SqlDataAdapter sda = new SqlDataAdapter(command);   //data adapter initialized using the command
             DataTable dt = new DataTable("Patient");    //new datatable created
